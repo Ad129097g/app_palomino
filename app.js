@@ -5,7 +5,7 @@ const db = require('./db');
 const pedidos = require('./routes/pedidos');
 
 const path = __dirname + '/views/';
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 11899;
 
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
