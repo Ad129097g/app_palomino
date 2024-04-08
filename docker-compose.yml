@@ -17,7 +17,7 @@ services:
       - MONGO_PORT=$MONGO_PORT
       - MONGO_DB=$MONGO_DB
     ports:
-      - "11800:11899"	
+      - "11800:11898"	
     volumes:
       - .:/home/node/app_palomino
       - node_modules:/home/node/app_palomino/node_modules
