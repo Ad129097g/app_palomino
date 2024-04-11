@@ -35,7 +35,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=$MONGO_USERNAME
       - MONGO_INITDB_ROOT_PASSWORD=$MONGO_PASSWORD
     volumes:     
-      - dbdata:/data/db_palomino
+      - dbdata_palomino:/data/db_palomino
     networks:
       - ap-network  
 
@@ -46,5 +46,5 @@ networks:
 
 
 volumes:
-  dbdata:
+  dbdata_palomino:
   node_modules:
