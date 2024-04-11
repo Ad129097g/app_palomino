@@ -17,12 +17,12 @@ services:
       - MONGO_PORT=$MONGO_PORT
       - MONGO_DB=$MONGO_DB
     ports:
-      - "11800:8080"	
+      - "11800:11899"	
     volumes:
       - .:/home/node/app_palomino
       - node_modules:/home/node/app_palomino/node_modules
     networks:
-      - ap-network
+      - palomino-network
     command: ./wait-for.sh db:27017 -- /home/node/app_palomino/node_modules/.bin/nodemon app.js
 
 
@@ -37,11 +37,11 @@ services:
     volumes:     
       - dbdata_palomino:/data/db_palomino
     networks:
-      - ap-network  
+      - palomino-network  
 
 
 networks:
-  ap-network:
+  palomino-network:
     driver: bridge
 
 
